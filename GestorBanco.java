@@ -15,6 +15,8 @@ public class GestorBanco {
         this.cuentas = new ArrayList<>();
         this.transacciones = new ArrayList<>();
         this.titularidades = new ArrayList<>();
+        
+
     }
     
     // ========== MÉTODOS PARA CLIENTES ==========

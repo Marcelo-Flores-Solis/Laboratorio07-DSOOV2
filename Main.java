@@ -6,6 +6,19 @@ public class Main {
         GestorBanco gestor = new GestorBanco();
         int opcion;
 
+         
+        gestor.registrarCliente("Juan", "Pérez", "12121212", "C001", "perez@gmail.com", "activo");
+        gestor.registrarCliente("Ana", "Gómez", "21212121", "C002", "ana@gmail.com" , "activo");
+
+        // Empleados predeterminados
+
+        gestor.registrarEmpleado("María", "López", "89898989", "E001", "Cajero");
+        gestor.registrarEmpleado("Carlos", "Ramírez", "98989898", "E002", "Gerente");
+
+        gestor.abrirCuenta("21212121", "CU001", "ahorros");
+        gestor.abrirCuenta("12121212", "CU002", "corriente");
+
+
         do {
             System.out.println("\n====== MENU BANCO ======");
             System.out.println("1. Registrar Cliente");
@@ -20,7 +33,7 @@ public class Main {
             System.out.println("0. Salir");
             System.out.print("Seleccione una opción: ");
             opcion = sc.nextInt();
-            sc.nextLine(); // limpiar buffer
+            sc.nextLine();
 
             switch (opcion) {
                 case 1 -> {
@@ -238,7 +251,7 @@ public class Main {
                             sc.next();
                         }
                         monto = sc.nextDouble();
-                        sc.nextLine(); // limpiar buffer
+                        sc.nextLine(); 
                         if (!Validador.validarPositivo(monto)) {
                             Validador.mostrarError("El monto debe ser positivo");
                         }
@@ -248,7 +261,8 @@ public class Main {
                     String idTransaccion;
                     do {
                         System.out.print("ID Transacción: ");
-                        idTransaccion = sc.nextLine();
+                        idTransaccion = sc.next();
+                        sc.nextLine();
                         if (!Validador.validarNoVacio(idTransaccion)) {
                             Validador.mostrarError("El ID de transacción no puede estar vacío");
                         }
@@ -285,7 +299,7 @@ public class Main {
                             sc.next();
                         }
                         monto = sc.nextDouble();
-                        sc.nextLine(); // limpiar buffer
+                        sc.nextLine(); 
                         if (!Validador.validarPositivo(monto)) {
                             Validador.mostrarError("El monto debe ser positivo");
                         }
