@@ -45,7 +45,7 @@ public class Main {
                         System.out.print("Nombres: ");
                         nombres = sc.nextLine();
                         if (!Validador.validarNombre(nombres)) {
-                            Validador.mostrarError("El nombre debe contener solo letras y espacios (mínimo 2 caracteres)");
+                            Validador.mostrarError("El nombre debe contener solo letras y espacios ");
                         }
                     } while (!Validador.validarNombre(nombres));
 
@@ -55,7 +55,7 @@ public class Main {
                         System.out.print("Apellidos: ");
                         apellidos = sc.nextLine();
                         if (!Validador.validarApellido(apellidos)) {
-                            Validador.mostrarError("El apellido debe contener solo letras y espacios (mínimo 2 caracteres)");
+                            Validador.mostrarError("El apellido debe contener solo letras y espacios ");
                         }
                     } while (!Validador.validarApellido(apellidos));
 
@@ -85,7 +85,7 @@ public class Main {
                         System.out.print("Correo: ");
                         correo = sc.nextLine();
                         if (!Validador.validarCorreo(correo)) {
-                            Validador.mostrarError("El correo debe tener un formato válido (ejemplo@dominio.com)");
+                            Validador.mostrarError("El correo debe tener un formato válido ");
                         }
                     } while (!Validador.validarCorreo(correo));
 
@@ -112,7 +112,7 @@ public class Main {
                         System.out.print("Nombres: ");
                         nombres = sc.nextLine();
                         if (!Validador.validarNombre(nombres)) {
-                            Validador.mostrarError("El nombre debe contener solo letras y espacios (mínimo 2 caracteres)");
+                            Validador.mostrarError("El nombre debe contener solo letras y espacios ");
                         }
                     } while (!Validador.validarNombre(nombres));
 
@@ -122,7 +122,7 @@ public class Main {
                         System.out.print("Apellidos: ");
                         apellidos = sc.nextLine();
                         if (!Validador.validarApellido(apellidos)) {
-                            Validador.mostrarError("El apellido debe contener solo letras y espacios (mínimo 2 caracteres)");
+                            Validador.mostrarError("El apellido debe contener solo letras y espacios ");
                         }
                     } while (!Validador.validarApellido(apellidos));
 
