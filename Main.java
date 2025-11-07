@@ -238,8 +238,14 @@ public class Main {
                     } while (!Validador.validarNoVacio(numeroCuenta));
 
                     // DNI empleado (opcional)
-                    System.out.print("DNI Empleado (opcional, Enter para omitir): ");
-                    String dniEmpleado = sc.nextLine();
+                    String dniEmpleado;
+                    do {
+                        System.out.print("DNI del empleado: ");
+                        dniEmpleado = sc.nextLine();
+                        if (!Validador.validarDNI(dniEmpleado)) {
+                            Validador.mostrarError("El DNI debe contener exactamente 8 dígitos numéricos");
+                        }
+                    } while (!Validador.validarDNI(dniEmpleado));
 
                     // Validar monto
                     double monto;
@@ -286,8 +292,14 @@ public class Main {
                     } while (!Validador.validarNoVacio(numeroCuenta));
 
                     // DNI empleado (opcional)
-                    System.out.print("DNI Empleado (opcional, Enter para omitir): ");
-                    String dniEmpleado = sc.nextLine();
+                    String dniEmpleado;
+                    do {
+                        System.out.print("DNI del empleado: ");
+                        dniEmpleado = sc.nextLine();
+                        if (!Validador.validarDNI(dniEmpleado)) {
+                            Validador.mostrarError("El DNI debe contener exactamente 8 dígitos numéricos");
+                        }
+                    } while (!Validador.validarDNI(dniEmpleado));
 
                     // Validar monto
                     double monto;
